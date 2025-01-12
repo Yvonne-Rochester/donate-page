@@ -23,24 +23,26 @@
         .slider {
             position: relative;
             width: 100%;
-            height: 573px;
+            height: 80vh;
             overflow: hidden;
-            margin-bottom: 0;
+            
         }
 
         .slides {
             display: flex;
             transition: transform 1s ease-in-out;
+            height: 100%;
         }
 
         .slides img {
             width: 100%;
-            height: 100%;
+            height:100%;
+            flex: 1 0 auto;
             object-fit: cover;
         }
 
         .donation-form, .donation-purpose, .contact-info, .about-section {
-            padding: 20px;
+            padding: px;
             background-color: #3341359d;
             text-align: center;
             margin: 0;
@@ -63,7 +65,7 @@
             margin: 10px auto;
             box-sizing: border-box;
             margin-bottom: 15px;
-            padding: 10px;
+            padding: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
@@ -83,7 +85,7 @@
         .payment-options {
             text-align: center;
             background-color: #d3d5c6;
-            padding: 20px;
+            padding: 0px;
         }
 
         .payment-container {
@@ -93,17 +95,32 @@
 
         .payment-logos {
             display: flex;
-            gap: 10px;
-            justify-items: center;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            padding: 20px;
+            width: 100%;
         }
 
         .payment-logos img {
-            margin: 10px;
-            width: 100px;
+            margin: 20px auto;
+            width: 100%;
             height: auto;
-            max-width: 100%;
+            max-width: 800px;
+            display: block;
         }
+        .payment-options, .donation-purpose, .donation-form, .contact-info, .about-section {
+            margin-top: 1px; /* Adjust spacing above */
+            margin-bottom: 10px; /* Adjust spacing below */
+        }
+
+        .contact-info {
+            text-align: center;
+            background-color: #3341359d;
+            padding: 20px;
+            margin-bottom: 30px; /* Increased bottom margin */
+}
+
 
         .donation-purpose p, .contact-info p, .about-section p {
             max-width: 800px;
@@ -115,6 +132,7 @@
             width: 150px;
             border-radius: 50%;
             margin-bottom: 20px;
+            margin-left: 15px;
             max-width: 100%;
             height: auto;
         }
@@ -139,22 +157,26 @@
     text-decoration: none;
 }
 
+
+
 .about-section { 
     display: flex; 
     flex-direction: column; 
     align-items: center; 
-    padding: 20px; 
+    padding: 10px; 
     background-color: #3341359d; 
     text-align: center; 
     margin: 20px 0; 
     font-size: 20px;
+    margin-top: 10px;
 }
 .about-section h2 {
     text-align: center; /* Center the heading */
-    margin-bottom: 20px; /* Add space below the heading */
+    margin-bottom: 10px; /* Add space below the heading */
+   
 }
 .about-section p {
-    margin-top: 15px;
+    margin-top: 30px;
     max-width: 800px;
     margin: 0 auto;
     text-align: justify;
@@ -164,14 +186,22 @@
         flex-direction: row;
         text-align: left;
 }
-.about-section img 
-    margin-right: 25px;
+}
+.about-section img {
+    margin-right: 35px;
     margin-bottom: 0;
+    margin-top: 10px;
 }
 
 .about-section p {
     flex: 1;
 }
+
+section {
+    margin: 10px 0;
+    padding: 1px;
+}
+
           
 .responsive-img {
     max-width: 100%;
@@ -193,7 +223,6 @@
         <img src="slider4.png" alt="Donation Form">
     </div>
 </section>
-
 <section class="donation-form">
     <h1>Make a Donation</h1>
         <form>
@@ -215,7 +244,6 @@
         <button type="submit">Click Here to Donate</button>
     </form>
 </section>
-
 <section class="payment-options">
     <div class="payment-container">
         <h2>Additional Payment Options</h2>
@@ -225,19 +253,16 @@
             </div>
     </div>
 </section>
-
 <section class="donation-purpose">
     <h2>What Will My Donation Go Towards?</h2>
     <p>Thanks to donations like yours, we have translated my bestselling book, Face to Face Appearances by Jesus: The Ultimate Intimacy, into over 17 languages, reaching more than 16 million people who have encountered the Lord Jesus face to face. Through our syndicated partners, we are now streaming the Miracles Today TV broadcast into a potential 4.5 billion homes. <br><br> Our mandate is to reap the 8 billion soul harvest, and your support has enabled us to open the first of many campuses where missionaries from around the world can receive free training in the Hebraic discipleship model. We are deeply committed to community building; through our Convoy of Miracles, we have provided Thanksgiving turkey meals and Christmas toys to families who have lost loved ones to gang violence. Additionally, we offer disaster relief to those displaced by tornadoes and hurricanes. <br><br> These initiatives represent just a fraction of what your generosity has made possible. Our weekly mentorship teachings are now streamed in over 120 countries. If the Kingdom of God Global Church has impacted your life, we invite you to help us train more missionaries for free so that, together, we can reap the 8 billion soul harvest. Please consider contributing what you can today! <br><br> <h3>THE KINGDOM OF GOD GLOBAL CHURCH THANKS YOU FOR YOUR DONATIONS!</h3></p>
 </section>
-
 <section class="contact-info">
     <h2>Details and Contact Info</h2>
     <p>Benefits of Donating Online: Helping KOGGC – Online contributions are instant and require less processing from our administrative staff. This system enables you to support KOGGC by making a one-time contribution or establishing a recurring contribution which is safe and easy to do. <br> <br> Security – Online giving is more secure than giving with a check because an electronic gift cannot be lost or stolen. For additional information on how KOGGC keeps your information and contributions secure, scroll to the “Security Policies” section.</p>
     <br>
     <p><strong>Phone:</strong> 1-877-843-4567</p>
 </section>
-
 <section class="about-section">
     <h2>About David E. Taylor</h2>
     <img src="DavidETaylor.png" alt="David E. Taylor" Class="responsive-img">
@@ -245,29 +270,24 @@
        <a href="https://joshuamediaministries.org/feature-presentation/about-apostle-david-e-taylor/" target="_blank">Read more about David E. Taylor</a>
     </p>
 </section>
-
-
-
 <footer>
     <p>&copy; 2025 Kingdom of God Global Church. All Rights Reserved. Thank You for Your Donation!</p>
 </footer>
-
 <script>
     const slides = document.querySelector('.slides');
-    const images = document.querySelectorAll('.slides img');
-    const totalSlides = images.length;
-    let currentIndex = 0;
+const totalSlides = document.querySelectorAll('.slides img').length;
+let currentIndex = 0;
 
-    function showSlide(index) {
-        slides.style.transform = `translateX(-${index * 100}%)`;
-    }
+function showSlide(index) {
+    slides.style.transform = `translateX(-${index * 100}%)`;
+}
 
-    function nextSlide() {
-        currentIndex = (currentIndex + 1) % totalSlides;
-        showSlide(currentIndex);
-    }
+function nextSlide() {
+    currentIndex = (currentIndex + 1) % totalSlides;
+    showSlide(currentIndex);
+}
 
-    setInterval(nextSlide, 10000); // 10 seconds per slide
+setInterval(nextSlide, 10000); // Set the delay for smooth transitions
 </script>
 
 
