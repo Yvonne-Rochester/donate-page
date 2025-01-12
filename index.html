@@ -94,12 +94,14 @@
             display: flex;
             gap: 10px;
             justify-items: center;
+            flex-wrap: wrap;
         }
 
         .payment-logos img {
             margin: 10px;
             width: 100px;
             height: auto;
+            max-width: 100%;
         }
 
         .donation-purpose p, .contact-info p, .about-section p {
@@ -112,6 +114,8 @@
             width: 150px;
             border-radius: 50%;
             margin-bottom: 20px;
+            max-width: 100%;
+            height: auto;
         }
 
         footer {
@@ -134,15 +138,6 @@
     text-decoration: none;
 }
 
-.about-section img {
-    width: 150px;
-    border-radius: 50%; /* Keep the circular shape */
-    margin-bottom: 20px;
-    max-width: 100%;
-    height: auto;
-    border: 3px solid #093309; /* Add a subtle border */
-}
-
 .about-section { 
     display: flex; 
     flex-direction: column; 
@@ -150,28 +145,24 @@
     padding: 20px; 
     background-color: #3341359d; 
     text-align: center; 
-    margin: 20px 0; font-size: 20px;
+    margin: 20px 0; 
+    font-size: 20px;
 }
-
 .about-section h2 {
     text-align: center; /* Center the heading */
     margin-bottom: 20px; /* Add space below the heading */
 }
-
-
 .about-section p {
     margin-top: 15px;
     max-width: 800px;
     margin: 0 auto;
     text-align: justify;
 }
-
 @media (min-width: 768px) {
     .about-section {
         flex-direction: row;
         text-align: left;
-    }
-
+}
 .about-section img 
     margin-right: 25px;
     margin-bottom: 0;
@@ -179,13 +170,12 @@
 
 .about-section p {
     flex: 1;
-    
+}
+          
 .responsive-img {
     max-width: 100%;
     height: auto;
 }
-
-
     </style>
 </head>
 <body>
@@ -221,27 +211,24 @@
         <input type="text" placeholder="Full Name" required>
         <input type="number" placeholder="Card Number" required>
         <input type="email" placeholder="Email Address" required>
-                <button type="submit">Click Here to Donate</button>
+        <button type="submit">Click Here to Donate</button>
     </form>
 </section>
 
 <section class="payment-options">
-    <div class="payment-container"></div>
+    <div class="payment-container">
         <h2>Additional Payment Options</h2>
-            <div class="payment-logos"></div>
+            <div class="payment-logos">
                 <img src="pymt1.png" alt="Zelle" class="responsive-img">
                 <img src="pymt2.png" alt="Apple Pay" class="responsive-img">
             </div>
     </div>
 </section>
 
-
 <section class="donation-purpose">
     <h2>What Will My Donation Go Towards?</h2>
     <p>Thanks to donations like yours, we have translated my bestselling book, Face to Face Appearances by Jesus: The Ultimate Intimacy, into over 17 languages, reaching more than 16 million people who have encountered the Lord Jesus face to face. Through our syndicated partners, we are now streaming the Miracles Today TV broadcast into a potential 4.5 billion homes. <br><br> Our mandate is to reap the 8 billion soul harvest, and your support has enabled us to open the first of many campuses where missionaries from around the world can receive free training in the Hebraic discipleship model. We are deeply committed to community building; through our Convoy of Miracles, we have provided Thanksgiving turkey meals and Christmas toys to families who have lost loved ones to gang violence. Additionally, we offer disaster relief to those displaced by tornadoes and hurricanes. <br><br> These initiatives represent just a fraction of what your generosity has made possible. Our weekly mentorship teachings are now streamed in over 120 countries. If the Kingdom of God Global Church has impacted your life, we invite you to help us train more missionaries for free so that, together, we can reap the 8 billion soul harvest. Please consider contributing what you can today! <br><br> <h3>THE KINGDOM OF GOD GLOBAL CHURCH THANKS YOU FOR YOUR DONATIONS!</h3></p>
 </section>
-
-
 
 <section class="contact-info">
     <h2>Details and Contact Info</h2>
