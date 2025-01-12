@@ -43,9 +43,10 @@
             background-color: #3341359d;
             text-align: center;
             margin: 20px 0;
+            font-size: 20px;
         }
 
-        .donation-form h2, .donation-purpose h2, .contact-info h2, .about-section h2 {
+        .donation-form h1, .donation-purpose h1, .contact-info h1, .about-section h1 {
             margin-bottom: 20px;
         }
 
@@ -69,7 +70,7 @@
         .donation-form button {
             background-color: #011205;
             color: #fff;
-            font-size: 16px;
+            font-size: 20px;
             border: none;
             cursor: pointer;
         }
@@ -80,7 +81,7 @@
 
         .payment-options {
             text-align: center;
-            background-color: #f1f1f1;
+            background-color: #d3d5c6;
             padding: 20px;
         }
 
@@ -90,9 +91,8 @@
         }
 
         .payment-logos {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 20px;
+            display: flex;
+            gap: 10px;
             justify-items: center;
         }
 
@@ -123,6 +123,46 @@
             bottom: 0;
             width: 100%;
         }
+        .about-section a {
+        color: #0b3d0b; /* Match your color scheme */
+        text-decoration: underline;
+        font-weight: bold;
+}
+
+.about-section a:hover {
+    color: #093309; /* Darker shade on hover */
+    text-decoration: none;
+}
+
+.about-section img {
+    float: left; /* or float: right; */
+    margin: 0 20px 20px 0; /* Increase the right and bottom margins */
+    border: 3px solid #093309; /* Add a subtle border */
+    border-radius: 50%; /* Keep the circular shape */
+    margin-right: 25px;
+    margin-bottom: 15px;
+}
+
+.about-section {
+    display: flex;
+    align-items: center;
+}
+
+.about-section h2 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Add space below the heading */
+    padding-right: 20px; /* Optional: Add padding to push away from the image */
+}
+
+
+.about-section p {
+    margin-top: 15px;
+    flex: 1; /* Allow the text to fill the remaining space */
+    text-align: justify;
+}
+
+
+
     </style>
 </head>
 <body>
@@ -141,8 +181,8 @@
 </section>
 
 <section class="donation-form">
-    <h2>Make a Donation</h2>
-    <form>
+    <h1>Make a Donation</h1>
+        <form>
         <input type="number" placeholder="Donation Amount" required>
         <select>
             <option value="general">General Giving</option>
@@ -166,19 +206,16 @@
     <div class="payment-container"></div>
         <h2>Additional Payment Options</h2>
             <div class="payment-logos"></div>
-                <img src="zelle-logo.png" alt="Zelle">
-                <img src="apple-pay-logo.png" alt="Apple Pay">
-                <img src="bitcoin-logo.png" alt="Bitcoin">
-                <img src="cash-app-logo.png" alt="Cash App">
-                <img src="text-to-give-logo.png" alt="Text to Give">
+                <img src="pymt1.png" alt="Zelle">
+                <img src="pymt2.png" alt="Apple Pay">
             </div>
-        </div>
+    </div>
 </section>
 
 
 <section class="donation-purpose">
     <h2>What Will My Donation Go Towards?</h2>
-    <p>Thanks to donations like yours, we have translated my bestselling book, Face to Face Appearances by Jesus: The Ultimate Intimacy, into over 17 languages, reaching more than 16 million people who have encountered the Lord Jesus face to face. Through our syndicated partners, we are now streaming the Miracles Today TV broadcast into a potential 4.5 billion homes. <br><br> Our mandate is to reap the 8 billion soul harvest, and your support has enabled us to open the first of many campuses where missionaries from around the world can receive free training in the Hebraic discipleship model. We are deeply committed to community building; through our Convoy of Miracles, we have provided Thanksgiving turkey meals and Christmas toys to families who have lost loved ones to gang violence. Additionally, we offer disaster relief to those displaced by tornadoes and hurricanes. <br><br> These initiatives represent just a fraction of what your generosity has made possible. Our weekly mentorship teachings are now streamed in over 120 countries. If the Kingdom of God Global Church has impacted your life, we invite you to help us train more missionaries for free so that, together, we can reap the 8 billion soul harvest. Please consider contributing what you can today! <br><br> KINGDOM OF GOD GLOBAL CHURCH THANKS YOU FOR YOUR DONATIONS!</p>
+    <p>Thanks to donations like yours, we have translated my bestselling book, Face to Face Appearances by Jesus: The Ultimate Intimacy, into over 17 languages, reaching more than 16 million people who have encountered the Lord Jesus face to face. Through our syndicated partners, we are now streaming the Miracles Today TV broadcast into a potential 4.5 billion homes. <br><br> Our mandate is to reap the 8 billion soul harvest, and your support has enabled us to open the first of many campuses where missionaries from around the world can receive free training in the Hebraic discipleship model. We are deeply committed to community building; through our Convoy of Miracles, we have provided Thanksgiving turkey meals and Christmas toys to families who have lost loved ones to gang violence. Additionally, we offer disaster relief to those displaced by tornadoes and hurricanes. <br><br> These initiatives represent just a fraction of what your generosity has made possible. Our weekly mentorship teachings are now streamed in over 120 countries. If the Kingdom of God Global Church has impacted your life, we invite you to help us train more missionaries for free so that, together, we can reap the 8 billion soul harvest. Please consider contributing what you can today! <br><br> <h3>THE KINGDOM OF GOD GLOBAL CHURCH THANKS YOU FOR YOUR DONATIONS!</h3></p>
 </section>
 
 
@@ -194,8 +231,11 @@
     <h2>About David E. Taylor</h2>
     <img src="DavidETaylor.png" alt="David E. Taylor">
     <p>David E. Taylor is known globally as a friend of God and a Face to Face prophet. He serves in all fivefold ministry offices as an apostle. His heart is for everyone to know Jesus. David’s dynamic revelation and special Kingdom teaching ministry draw invitations from all nations. 
-        Read on »</p>
+       <a href="https://joshuamediaministries.org/feature-presentation/about-apostle-david-e-taylor/" target="_blank">Read more about David E. Taylor</a>
+    </p>
 </section>
+
+
 
 <footer>
     <p>&copy; 2025 Kingdom of God Global Church. All Rights Reserved. Thank You for Your Donation!</p>
