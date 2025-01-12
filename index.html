@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #d3d5c6; /* Adjusted background color */
+        }
+
+        header {
+            background-color: #011303;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            height: 573px;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 1s ease-in-out;
+        }
+
+        .slides img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .donation-form, .donation-purpose, .contact-info, .about-section {
+            padding: 20px;
+            background-color: #3341359d;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .donation-form h2, .donation-purpose h2, .contact-info h2, .about-section h2 {
+            margin-bottom: 20px;
+        }
+
+        .donation-form form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .donation-form input, .donation-form select, .donation-form button {
+            width: 100%;
+            max-width: 500px;
+            margin: 10px auto;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .donation-form button {
+            background-color: #011205;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .donation-form button:hover {
+            background-color: #093309;
+        }
+
+        .payment-options {
+            text-align: center;
+            background-color: #f1f1f1;
+            padding: 20px;
+        }
+
+        .payment-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .payment-logos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .payment-logos img {
+            margin: 10px;
+            width: 100px;
+            height: auto;
+        }
+
+        .donation-purpose p, .contact-info p, .about-section p {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: justify;
+        }
+
+        .about-section img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #011303;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Kingdom of God Global Church</h1>
+</header>
+
+<section class="slider">
+    <div class="slides">
+        <img src="slider1.png" alt="Kingdom of God Global Church">
+        <img src="slider2.png" alt="Donation Options">
+        <img src="slider3.png" alt="Convoy of Miracles">
+        <img src="slider4.png" alt="Donation Form">
+    </div>
+</section>
+
+<section class="donation-form">
+    <h2>Make a Donation</h2>
+    <form>
+        <input type="number" placeholder="Donation Amount" required>
+        <select>
+            <option value="general">General Giving</option>
+            <option value="missions">Missions</option>
+            <option value="charity">Charity Work</option>
+        </select>
+        <select>
+            <option value="creditcard">Credit Card</option>
+            <option value="ach"><ACH</option>
+            <option value="paypal">PayPal</option>
+            <option value="googlepay">Google Pay</option>           
+        </select>
+        <input type="text" placeholder="Full Name" required>
+        <input type="number" placeholder="Card Number" required>
+        <input type="email" placeholder="Email Address" required>
+                <button type="submit">Click Here to Donate</button>
+    </form>
+</section>
+
+<section class="payment-options">
+    <div class="payment-container"></div>
+        <h2>Additional Payment Options</h2>
+            <div class="payment-logos"></div>
+                <img src="zelle-logo.png" alt="Zelle">
+                <img src="apple-pay-logo.png" alt="Apple Pay">
+                <img src="bitcoin-logo.png" alt="Bitcoin">
+                <img src="cash-app-logo.png" alt="Cash App">
+                <img src="text-to-give-logo.png" alt="Text to Give">
+            </div>
+        </div>
+</section>
+
+
+<section class="donation-purpose">
+    <h2>What Will My Donation Go Towards?</h2>
+    <p>Thanks to donations like yours, we have translated my bestselling book, Face to Face Appearances by Jesus: The Ultimate Intimacy, into over 17 languages, reaching more than 16 million people who have encountered the Lord Jesus face to face. Through our syndicated partners, we are now streaming the Miracles Today TV broadcast into a potential 4.5 billion homes. <br><br> Our mandate is to reap the 8 billion soul harvest, and your support has enabled us to open the first of many campuses where missionaries from around the world can receive free training in the Hebraic discipleship model. We are deeply committed to community building; through our Convoy of Miracles, we have provided Thanksgiving turkey meals and Christmas toys to families who have lost loved ones to gang violence. Additionally, we offer disaster relief to those displaced by tornadoes and hurricanes. <br><br> These initiatives represent just a fraction of what your generosity has made possible. Our weekly mentorship teachings are now streamed in over 120 countries. If the Kingdom of God Global Church has impacted your life, we invite you to help us train more missionaries for free so that, together, we can reap the 8 billion soul harvest. Please consider contributing what you can today! <br><br> KINGDOM OF GOD GLOBAL CHURCH THANKS YOU FOR YOUR DONATIONS!</p>
+</section>
+
+
+
+<section class="contact-info">
+    <h2>Details and Contact Info</h2>
+    <p>Benefits of Donating Online: Helping KOGGC – Online contributions are instant and require less processing from our administrative staff. This system enables you to support KOGGC by making a one-time contribution or establishing a recurring contribution which is safe and easy to do. <br> <br> Security – Online giving is more secure than giving with a check because an electronic gift cannot be lost or stolen. For additional information on how KOGGC keeps your information and contributions secure, scroll to the “Security Policies” section.</p>
+    <br>
+    <p><strong>Phone:</strong> 1-877-843-4567</p>
+</section>
+
+<section class="about-section">
+    <h2>About David E. Taylor</h2>
+    <img src="DavidETaylor.png" alt="David E. Taylor">
+    <p>David E. Taylor is known globally as a friend of God and a Face to Face prophet. He serves in all fivefold ministry offices as an apostle. His heart is for everyone to know Jesus. David’s dynamic revelation and special Kingdom teaching ministry draw invitations from all nations. 
+        Read on »</p>
+</section>
+
+<footer>
+    <p>&copy; 2025 Kingdom of God Global Church. All Rights Reserved. Thank You for Your Donation!</p>
+</footer>
+
+<script>
+    const slides = document.querySelector('.slides');
+    const images = document.querySelectorAll('.slides img');
+    const totalSlides = images.length;
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        slides.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+    }
+
+    setInterval(nextSlide, 10000); // 10 seconds per slide
+</script>
+
+
+</body>
+</html>
