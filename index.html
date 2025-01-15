@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+
     <title>Donation Page</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Open Sans', Arial, sans-serif;
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -41,12 +43,47 @@
             object-fit: cover;
         }
 
-        .donation-form, .donation-purpose, .contact-info, .about-section {
+        .donation-form, .contact-info, .about-section {
             padding: 25px;
             background-color: #3341359d;
             text-align: center;
-            margin: 20;
+            margin: 20px;
             font-size: 20px;
+        }
+
+        .donation-purpose {
+            padding: 30px; /* Increased padding for breathing room */
+            background: linear-gradient(to bottom, #2e3b2e, #1e1e1e); /* Subtle gradient */
+            text-align: center;
+            margin: 20px 0;
+            color: #f5f5f5; /* Softer white for text */
+            font-family: 'Open Sans', Arial, sans-serif; /* Modern sans-serif font */
+            line-height: 1.6; /* Improved line spacing for readability */
+            border-radius: 10px; /* Rounded corners for a softer look */
+       }
+
+        .donation-purpose h1 {
+            font-size: 28px; /* Larger font size for headings */
+            color: #ffcc00; /* Highlighted color for heading */
+            font-weight: 700; /* Bold heading */
+            margin-bottom: 20px; /* Spacing below heading */
+          }
+
+        .donation-purpose h4 {
+            font-size: px; /* Comfortable reading size */
+            text-align: center; /* Justified text alignment */                       
+        }
+
+        .donation-purpose p strong {
+            color: #ffcc00; /* Highlight key text in the body */
+        }
+        .donation-purpose p {
+            font-size: 20px; /* Adjust font size */
+            line-height: 1.6; /* Ensure proper readability */
+        }
+
+        .donation-purpose:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for hover effect */
         }
 
         .donation-form h1, .donation-purpose h1, .contact-info h1, .about-section h1 {
@@ -116,11 +153,10 @@
 
         .contact-info {
             text-align: center;
-            background-color: #3341359d;
+            background-color: #d3d5c6;
             padding: 20px;
             margin-bottom: 30px; /* Increased bottom margin */
 }
-
 
         .donation-purpose p, .contact-info p, .about-section p {
             max-width: 800px;
@@ -136,6 +172,59 @@
             max-width: 100%;
             height: auto;
         }
+
+        .thank-you-section {
+            background-color: #1e2b1e; /* Slightly darker for elegance */
+            color: #f4f4f4; /* Softer white for better contrast */
+            padding: 30px;
+            text-align: center;
+            font-family: 'Open Sans', Arial, sans-serif;
+            line-height: 1.8; /* Increased line height for readability */
+            margin: 30px 20px; /* Add more breathing room */
+            margin-bottom: 40px; /* Increase spacing below */
+            border-radius: 12px; /* Smooth rounded corners */
+            border-bottom: 2px solid #ccc; /* Adds a subtle line below the section */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+        }
+
+        .thank-you-section h2 {
+            font-size: 28px; /* Larger and more prominent heading */
+            color: #ffcc33; /* Brighter gold for contrast and emphasis */
+            margin-bottom: 20px;
+            text-transform: uppercase; /* Uniform and bold look */
+            letter-spacing: 1px; /* Slight spacing for elegance */
+        }
+
+        .thank-you-section p {
+            font-size: 20px; /* Comfortable font size */
+            margin: 15px 0;
+            line-height: 1.6; /* Ensure proper readability */
+            text-align: justify; /* For consistent alignment */
+        }
+
+        .thank-you-section p.italic {
+            font-style: italic;
+            font-size: 14px;
+            background-color: #3c4d3c; /* Subtle darker shade */
+            color: #dcdcdc; /* Subtle color for disclaimers */
+            margin-top: 40px;
+            padding: 10px;
+            border-radius: 5px;
+
+            text-align: center;
+        }
+
+        .thank-you-section .contact-details {
+            font-size: 20px; /* Distinguish contact info */
+            font-weight: bold;
+            color: #ffcc33; /* Gold color to match the heading */
+            margin: 20px 0;
+        }
+
+        .thank-you-section .emoji {
+            font-size: 22px; /* Larger and visually engaging emojis */
+        }
+
 
         footer {
             background-color: #011303;
@@ -163,12 +252,12 @@
     display: flex; 
     flex-direction: column; 
     align-items: center; 
-    padding: 10px; 
+    padding: 20px; 
     background-color: #3341359d; 
     text-align: center; 
     margin: 20px 0; 
     font-size: 20px;
-    margin-top: 10px;
+    margin-top: 40px;
 }
 .about-section h2 {
     text-align: center; /* Center the heading */
@@ -229,8 +318,10 @@ section {
         <input type="number" placeholder="Donation Amount" required>
         <select>
             <option value="general">General Giving</option>
+            <option value="tithes">Tithes</option>
             <option value="missions">Missions</option>
-            <option value="charity">Charity Work</option>
+            <option value="charity">Convoy of Miracles</option>
+            <option value="discipleship">Campus for the Harvest</option>
         </select>
         <select>
             <option value="creditcard">Credit Card</option>
@@ -248,21 +339,37 @@ section {
     <div class="payment-container">
         <h2>Additional Payment Options</h2>
             <div class="payment-logos">
-                <img src="pymt1.png" alt="Zelle" class="responsive-img">
-                <img src="pymt2.png" alt="Apple Pay" class="responsive-img">
+                <img src="pymt1.png" alt="Additional Payment1" class="responsive-img">
+                <img src="pymt2.png" alt="Additional Payment2" class="responsive-img">
             </div>
     </div>
 </section>
 <section class="donation-purpose">
-    <h2>What Will My Donation Go Towards?</h2>
-    <p>Thanks to donations like yours, we have translated my bestselling book, Face to Face Appearances by Jesus: The Ultimate Intimacy, into over 17 languages, reaching more than 16 million people who have encountered the Lord Jesus face to face. Through our syndicated partners, we are now streaming the Miracles Today TV broadcast into a potential 4.5 billion homes. <br><br> Our mandate is to reap the 8 billion soul harvest, and your support has enabled us to open the first of many campuses where missionaries from around the world can receive free training in the Hebraic discipleship model. We are deeply committed to community building; through our Convoy of Miracles, we have provided Thanksgiving turkey meals and Christmas toys to families who have lost loved ones to gang violence. Additionally, we offer disaster relief to those displaced by tornadoes and hurricanes. <br><br> These initiatives represent just a fraction of what your generosity has made possible. Our weekly mentorship teachings are now streamed in over 120 countries. If the Kingdom of God Global Church has impacted your life, we invite you to help us train more missionaries for free so that, together, we can reap the 8 billion soul harvest. Please consider contributing what you can today! <br><br> <h3>THE KINGDOM OF GOD GLOBAL CHURCH THANKS YOU FOR YOUR DONATIONS!</h3></p>
+    <h1>What Will My Donation Go Towards?</h1>
+    <p>Thanks to donations like yours, we have translated my bestselling book, Face to Face Appearances by Jesus: The Ultimate Intimacy, into over 17 languages, reaching more than 16 million people who have encountered the Lord Jesus face to face. Through our syndicated partners, we are now streaming the Miracles Today TV broadcast into a potential 4.5 billion homes. <br><br> Our mandate is to reap the 8 billion soul harvest, and your support has enabled us to open the first of many campuses where missionaries from around the world can receive free training in the Hebraic discipleship model. We are deeply committed to community building; through our Convoy of Miracles, we have provided Thanksgiving turkey meals and Christmas toys to families who have lost loved ones to gang violence. Additionally, we offer disaster relief to those displaced by tornadoes and hurricanes. <br><br> These initiatives represent just a fraction of what your generosity has made possible. Our weekly mentorship teachings are now streamed in over 120 countries. If the Kingdom of God Global Church (KOGGC) has impacted your life, we invite you to help us train more missionaries for free so that, together, we can reap the 8 billion soul harvest. Please consider contributing what you can today! <br><br> <h4>THE KINGDOM OF GOD GLOBAL CHURCH THANKS YOU FOR YOUR DONATIONS!</h4></p>
+    
 </section>
 <section class="contact-info">
-    <h2>Details and Contact Info</h2>
+    <h1>Details and Contact Info</h1>
     <p>Benefits of Donating Online: Helping KOGGC – Online contributions are instant and require less processing from our administrative staff. This system enables you to support KOGGC by making a one-time contribution or establishing a recurring contribution which is safe and easy to do. <br> <br> Security – Online giving is more secure than giving with a check because an electronic gift cannot be lost or stolen. For additional information on how KOGGC keeps your information and contributions secure, scroll to the “Security Policies” section.</p>
     <br>
-    <p><strong>Phone:</strong> 1-877-843-4567</p>
+    <p><strong>Phone:</strong> 📞1-877-843-4567</p>
 </section>
+
+<section class="thank-you-section">
+    <h2>Thank You for Your Support</h2>
+    <p class="contact-details">
+        Kingdom of God Global Church<br>
+        20320 Superior Road, Taylor, MI 48180<br>
+        <span class="emoji">📞</span> 1-877-843-4567
+    </p>
+    <p>Apostle David E. Taylor and the Kingdom of God Global Church (KOGGC) thank you for your continued support. Your generous donations allow us to continue our work in spreading the message of the Kingdom of God and providing for those in need. We are deeply grateful for your partnership in this mission and encourage you to become one of our monthly covenant partners.</p>
+    <p>All donations given to the Kingdom of God Global Church are irrevocable when made and will be used as designated by the Board of Directors for the purpose of carrying out the purposes of the Ministry. Refunds or credits are not provided by KOGGC for any monetary gift, donation of assets, or gift given to the Ministry. We thank you for your support!</p>
+    <p class="italic">
+        Disclaimer: Contributions to the Kingdom of God Global Church are tax-deductible to the extent permitted by law. Please consult your tax advisor for specific advice on deducting your donation.
+    </p>
+</section>
+
 <section class="about-section">
     <h2>About David E. Taylor</h2>
     <img src="DavidETaylor.png" alt="David E. Taylor" Class="responsive-img">
