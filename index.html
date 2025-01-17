@@ -22,6 +22,60 @@
             text-align: center;
         }
 
+        ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+        ul li {
+            float: left;
+            width: auto; /* Adjust width to fit the content */
+            height: 30px;
+            background-color: #02150ff0;
+            opacity: 0.9;
+            line-height: 30px;
+            text-align: center;
+            font-size: 10px;
+            font-weight: bold;
+            position: relative;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            padding: 0 10px; /* Adjust padding for spacing */
+        }
+
+        ul li::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 35%; /* Adjust height to match text */
+            background-color: rgb(34, 9, 176); /* Line color */
+        }
+
+        ul li:last-child::after {
+            content: none; /* Remove the line from the last item */
+        }
+
+        ul li a:hover {
+            background-color: #de1fcb;
+        }
+
+        ul li ul li{
+            display: none;
+        }
+
+        ul li:hover ul li{
+            display: block;
+        }
+
+
         .slider {
             position: relative;
             width: 100%;
@@ -202,7 +256,7 @@
             text-align: justify; /* For consistent alignment */
         }
 
-        .thank-you-section p.italic {
+        .thank-you-section .disclaimer {
             font-style: italic;
             font-size: 14px;
             background-color: #3c4d3c; /* Subtle darker shade */
@@ -299,6 +353,11 @@ section {
     </style>
 </head>
 <body>
+    <ul>
+        <li><a href="#">HOME</a></li>           
+        <li><a href="#">STORE</a>            
+    </ul>
+
 
 <header>
     <h1>Kingdom of God Global Church</h1>
@@ -365,21 +424,21 @@ section {
     </p>
     <p>Apostle David E. Taylor and the Kingdom of God Global Church (KOGGC) thank you for your continued support. Your generous donations allow us to continue our work in spreading the message of the Kingdom of God and providing for those in need. We are deeply grateful for your partnership in this mission and encourage you to become one of our monthly covenant partners.</p>
     <p>All donations given to the Kingdom of God Global Church are irrevocable when made and will be used as designated by the Board of Directors for the purpose of carrying out the purposes of the Ministry. Refunds or credits are not provided by KOGGC for any monetary gift, donation of assets, or gift given to the Ministry. We thank you for your support!</p>
-    <p class="italic">
-        Disclaimer: Contributions to the Kingdom of God Global Church are tax-deductible to the extent permitted by law. Please consult your tax advisor for specific advice on deducting your donation.
-    </p>
+    <div class="disclaimer">Disclaimer: Contributions to the Kingdom of God Global Church are tax-deductible to the extent permitted by law. Please consult your tax advisor for specific advice on deducting your donation.
+    </div>
 </section>
 
 <section class="about-section">
     <h2>About David E. Taylor</h2>
     <img src="DavidETaylor.png" alt="David E. Taylor" Class="responsive-img">
     <p>David E. Taylor is known globally as a friend of God and a Face to Face prophet. He serves in all fivefold ministry offices as an apostle. His heart is for everyone to know Jesus. David’s dynamic revelation and special Kingdom teaching ministry draw invitations from all nations. 
-       <a href="https://joshuamediaministries.org/feature-presentation/about-apostle-david-e-taylor/" target="_blank">Read more about David E. Taylor</a>
+       <a href="https://joshuamediaministries.org/feature-presentation/about-apostle-david-e-taylor/" target="_blank">Read more>></a>
     </p>
 </section>
 <footer>
     <p>&copy; 2025 Kingdom of God Global Church. All Rights Reserved. Thank You for Your Donation!</p>
 </footer>
+
 <script>
     const slides = document.querySelector('.slides');
 const totalSlides = document.querySelectorAll('.slides img').length;
