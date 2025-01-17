@@ -282,15 +282,28 @@
 
         footer {
             background-color: #011303;
-            color: #fff;
+            color: #ccc;
             text-align: center;
-            padding: 10px;
+            padding: 10px 20px;
             position: relative;
             bottom: 0;
             width: 100%;
         }
+        
+        footer p {
+        font-size: 10px; 
+        line-height: 1.5; 
+        margin: 5px 0; 
+        font-weight: normal;
+    }
+
+        footer span {
+            font-size: 12px;
+            vertical-align: middle;
+        }
+
         .about-section a {
-        color: #0b3d0b; /* Match your color scheme */
+        color: #0b3d0b; 
         text-decoration: underline;
         font-weight: bold;
 }
@@ -299,8 +312,6 @@
     color: #093309; /* Darker shade on hover */
     text-decoration: none;
 }
-
-
 
 .about-section { 
     display: flex; 
@@ -350,6 +361,30 @@ section {
     max-width: 100%;
     height: auto;
 }
+
+#backToForm {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #3c5b46; /* Deep green background */
+    color: #ffffff; /* White icon */
+    border: none;
+    border-radius: 50%; /* Circular shape */
+    font-size: 20px; /* Adjust the size of the icon */
+    display: none; /* Initially hidden */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    z-index: 1000; /* Keep it on top */
+}
+
+#backToForm:hover {
+    background-color: #546e54; /* Slightly brighter green on hover */
+}
+
     </style>
 </head>
 <body>
@@ -370,10 +405,11 @@ section {
         <img src="slider3.png" alt="Convoy of Miracles">
         <img src="slider4.png" alt="Donation Form">
     </div>
-</section>
-<section class="donation-form">
+</section>  
+<section id="donation-form" class="donation-form">
+    <button id="backToForm">🢁</button>
     <h1>Make a Donation</h1>
-        <form>
+    <form>
         <input type="number" placeholder="Donation Amount" required>
         <select>
             <option value="general">General Giving</option>
@@ -386,7 +422,7 @@ section {
             <option value="creditcard">Credit Card</option>
             <option value="ach">ACH</option>
             <option value="paypal">PayPal</option>
-            <option value="googlepay">Google Pay</option>           
+            <option value="googlepay">Google Pay</option>
         </select>
         <input type="text" placeholder="Full Name" required>
         <input type="number" placeholder="Card Number" required>
@@ -437,7 +473,10 @@ section {
 </section>
 <footer>
     <p>&copy; 2025 Kingdom of God Global Church. All Rights Reserved. Thank You for Your Donation!</p>
+    <p><span>📞</span> 1-877-THE-GLORY (843-4567) | <span>📍</span> 20320 Superior Road, Taylor, MI 48180</p>
 </footer>
+
+
 
 <script>
     const slides = document.querySelector('.slides');
@@ -454,6 +493,33 @@ function nextSlide() {
 }
 
 setInterval(nextSlide, 10000); // Set the delay for smooth transitions
+
+
+// Get the button and the donation form section
+const backToFormButton = document.getElementById('backToForm');
+const donationFormSection = document.getElementById('donation-form');
+
+// Show or hide the button based on scroll position
+window.onscroll = function () {
+    const formPosition = donationFormSection.getBoundingClientRect();
+
+    // Show the button if the form is not fully visible
+    if (formPosition.top < 0 || formPosition.bottom > window.innerHeight) {
+        backToFormButton.style.display = 'flex'; // Show the button
+    } else {
+        backToFormButton.style.display = 'none'; // Hide the button
+    }
+};
+
+// Smooth scroll to the donation form when button is clicked
+backToFormButton.onclick = function () {
+    donationFormSection.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+    });
+};
+
+
 </script>
 
 
